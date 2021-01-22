@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { list } from './common/componentList';
+
+import './common/App.css';
 
 function App() {
+
+  const [itemRendered, setItemToBeRendered] = useState(null);
+
+  const handleItemClick = (item) => {
+    setItemToBeRendered(item.component)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {list.map((item) => {
+        return <li className='App__list' key={item.id} onClick={() => handleItemClick(item)} >
+          {item.name}
+        </li>;
+      })}
+
+      {itemRendered}
+
     </div>
   );
 }

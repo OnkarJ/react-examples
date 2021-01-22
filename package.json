@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "highcharts": "^8.2.2",
+    "highcharts-react-official": "1.1.0"
   }
 }

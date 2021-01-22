@@ -1,0 +1,17 @@
+body {
+    background: #33465b;
+    color: white;
+}
+
+.App__list {
+    cursor: pointer;
+    border: 1px solid white;
+    width: 300px;
+    padding: 5px;
+    list-style: none;
+}
+
+.App__list:hover {
+    background: #dedede;
+    color: black;
+}
